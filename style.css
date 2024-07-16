@@ -1,5 +1,8 @@
 * {
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 html {
@@ -8,11 +11,10 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 .container {
@@ -24,10 +26,23 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.judul {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.gambar {
+    width: 10%;
+    height: 10%;
+}
+
 h2 {
-    margin-top: 0;
-    font-size: 24px;
-    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
 }
 
 .ringan {
@@ -40,16 +55,15 @@ h2 {
 }
 
 .ringan2 {
-    color: white;
     margin: auto;
     width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     margin-top: 20px;
-    background-color: #585cda;
+    background-color: #00d0ff;
 }
 
-.berat {
+.sedang {
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -58,45 +72,80 @@ h2 {
     background-color: white;
 }
 
-.berat2 {
-    color: white;
+.sedang2 {
     margin: auto;
     width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     margin-top: 20px;
-    background-color: #2327a1;
+    background-color: yellow;
 }
 
-.judul {
-    padding: 20px;
+.berat {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #000000;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.berat2 {
     margin: auto;
     width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     margin-top: 20px;
-    background-color: pink;
+    background-color: rgb(0, 64, 255);
+}
+
+.siaga {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.siaga2 {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
 }
 
 table {
-    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    padding: 12px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-table,
-th,
-td {
-    border: 1px solid #ddd;
+table th {
+    background-color: #f4f4f9;
 }
 
-th,
-td {
-    padding: 8px;
-    text-align: center;
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-th {
-    background-color: #f2f2f2;
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.CEKLIS {
+    transform: scale(1.2);
 }
 
 div {
@@ -109,23 +158,26 @@ label {
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #56ff5c;
+    color: rgb(0, 0, 0);
     border: none;
     width: 20%;
     height: 5%;
     cursor: pointer;
     border-radius: 5px;
     margin: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 500px;
     font-size: large;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #ff0000;
 }
 
 input[type="checkbox"] {
-    transform: scale(1.5);
+    transform: scale(2);
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -133,8 +185,9 @@ input[type="checkbox"] {
 input[type="text"] {
     padding: 5px;
     width: auto;
+    margin-top: 10px;
     margin-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -146,6 +199,10 @@ input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     margin-top: 20px;
+}
+
+.form-group {
+    margin-left: 500px;
 }
 
 #form-group {
@@ -162,4 +219,22 @@ footer {
 .credits {
     font-size: 14px;
     color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+    
+    table th, table td {
+        text-align: right;
+        padding: 10px;
+    }
+    
+    table td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
 }
